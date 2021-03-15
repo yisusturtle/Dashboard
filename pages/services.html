@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="icon" type="image/png" href="../src/logo.png">
+    <title>Dashboard - Kubernetes</title>
+</head>
+<body>
+    <div class="container" id="contenido">
+        <div class="footer">
+            <p><a href="https://docs.google.com/document/d/15ekGJ68K-ZFIDF2p3TDCQ7j5NPoe5uuYPdotZCY-lh8/edit">Trabajo fin de grado KUBERNETES + PYCLIENT</a> | Jesus Narbona Aguilar & Jose Manuel Ruiz</p>
+        </div>
+        <div class="topnav">
+            <a href="../index.html">Pods</a>
+            <a class="active" href="services.html">Services</a>
+        </div>
+
+        <div class="section">
+            <div class="act">
+                <a id="boton" href="index.html">↻ Actualizar</a>
+            </div>
+            <table>
+                <thead>
+                    <tr>
+                        <th>ClusterIP</th>
+                        <th>Nombre</th>
+                        <th>Namespace</th>
+                        <th>UID</th>
+                    </tr>
+                </thead>
+                <tbody id="res">
+
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <div class="pre-loader" id="loading">
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+    </div>
+
+    <script src="../js/services.js"></script>
+    <script src="../js/preloader.js"></script>
+
+</body>
+</html>
