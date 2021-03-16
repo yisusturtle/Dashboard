@@ -22,10 +22,10 @@ function traerDatos(){ //Funcion encargada de recoger los datos y ejecutar la si
             for (i=0;i<datos_items.length;i++){ //Bucle para que salgan todos los datos //clusterIP //Name //Namespace //uid
                 res.innerHTML += `
                 <tr>
-                    <td>${datos.items[i].spec.clusterIP}</td>
-                    <td>${datos.items[i].metadata.name}</td>
-                    <td>${datos.items[i].metadata.namespace}</td>
-                    <td>${datos.items[i].metadata.uid}</td>
+                    <td data-label="Cluster Ip">${datos.items[i].spec.clusterIP}</td>
+                    <td data-label="Nombre">${datos.items[i].metadata.name}</td>
+                    <td data-label="Namespace">${datos.items[i].metadata.namespace}</td>
+                    <td data-label="UID">${datos.items[i].metadata.uid}</td>
                 </tr>
                 `
             }

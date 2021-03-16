@@ -20,11 +20,11 @@ function traerDatos(){ //Funcion encargada de recoger los datos y ejecutar la si
             for (i=0;i<datos_meta.length;i++){ //Bucle para que salgan todos los datos //PodIP //Name //Namespace //uid //Phase
                 res.innerHTML += `
                 <tr>
-                    <td>${datos.items[i].status.podIP}</td> 
-                    <td>${datos.items[i].metadata.name}</td>
-                    <td>${datos.items[i].metadata.namespace}</td>
-                    <td>${datos.items[i].metadata.uid}</td>
-                    <td>${datos.items[i].status.phase}</td>
+                    <td data-label="POD Ip">${datos.items[i].status.podIP}</td> 
+                    <td data-label="Nombre">${datos.items[i].metadata.name}</td>
+                    <td data-label="Namespace">${datos.items[i].metadata.namespace}</td>
+                    <td data-label="UID">${datos.items[i].metadata.uid}</td>
+                    <td data-label="Estado">${datos.items[i].status.phase}</td>
                 </tr>
                 `
             }
