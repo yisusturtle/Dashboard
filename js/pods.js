@@ -3,7 +3,7 @@ document.querySelector('#boton').addEventListener('click', traerDatos()); //Para
 function traerDatos(){ //Funcion encargada de recoger los datos y ejecutar la siguiente funcion para darle formato
 
     const xhttp = new XMLHttpRequest();
-    xhttp.open('GET', 'src/podsjson.php' ,true); //Hace una GET al la ruta el servidor (pods en este caso)
+    xhttp.open('GET', 'src/podsjson.php' ,true); //Hace una GET al la ruta el servidor que recoge en el archivo php (pods en este caso)
 
     xhttp.send();
 
