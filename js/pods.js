@@ -1,31 +1,26 @@
-//console.log("correcto");
+document.querySelector('#boton').addEventListener('click', traerDatos()); //Para que cada vez que le des a actualizar genere los nuevos campos
 
-document.querySelector('#boton').addEventListener('click', traerDatos());
-
-function traerDatos(){
+function traerDatos(){ //Funcion encargada de recoger los datos y ejecutar la siguiente funcion para darle formato
 
     const xhttp = new XMLHttpRequest();
-    xhttp.open('GET', 'http://172.27.0.10:8081/api/v1/pods' ,true);
+    xhttp.open('GET', 'src/podsjson.php' ,true); //Hace una GET al la ruta el servidor (pods en este caso)
 
     xhttp.send();
 
     xhttp.onreadystatechange = function(){
         
-        if(this.readyState == 4 && this.status == 200){
-            //console.log(this.responseText);
-            let datos = JSON.parse(this.responseText);
-            console.log(datos.items[2].status);
+        if(this.readyState == 4 && this.status == 200){ //Comprueba que el estado del anterior comando sea 4 y que haya respuesta 200
 
+            let datos = JSON.parse(this.responseText); //Guarda en una variable el json formateado
             let datos_meta= datos.items;
-            console.log(datos_meta.length);
 
-            let res= document.querySelector('#res');
-            res.innerHTML='';
+            let res= document.querySelector('#res'); //Variable en la que vamos a aplicar los cambios (#res, en el codigo html)
+            res.innerHTML=''; //Limpiamos los datos
 
-            for (i=0;i<datos_meta.length;i++){
+            for (i=0;i<datos_meta.length;i++){ //Bucle para que salgan todos los datos //PodIP //Name //Namespace //uid //Phase
                 res.innerHTML += `
                 <tr>
-                    <td>${datos.items[i].status.podIP}</td>
+                    <td>${datos.items[i].status.podIP}</td> 
                     <td>${datos.items[i].metadata.name}</td>
                     <td>${datos.items[i].metadata.namespace}</td>
                     <td>${datos.items[i].metadata.uid}</td>
@@ -33,7 +28,6 @@ function traerDatos(){
                 </tr>
                 `
             }
-            
         }
     }
 }

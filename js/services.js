@@ -1,11 +1,9 @@
-//console.log("correcto");
-
 document.querySelector('#boton').addEventListener('click', traerDatos());
 
 function traerDatos(){
 
     const xhttp = new XMLHttpRequest();
-    xhttp.open('GET', 'http://172.27.0.10:8081/api/v1/services' ,true);
+    xhttp.open('GET', '../src/servicesjson.php' ,true);
 
     xhttp.send();
 
