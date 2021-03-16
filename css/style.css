@@ -155,7 +155,6 @@ table tr:nth-child(even){
     }
     table, table tbody, table tr, table td{
         display:block;
-        width: 100%;
     }
     table tr{
         margin-bottom: 15px;
@@ -186,5 +185,9 @@ table tr:nth-child(even){
         border-bottom-left-radius: 0px;
         border-bottom-right-radius: 0px;
         font-size: 10px;
+    }
+
+    .topnav a{
+        font-size: 13px;
     }
 }
