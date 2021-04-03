@@ -1,5 +1,6 @@
 # Dashboard version 1.0
-<h3>Para el proyecto de final de grado de Administrador de sistemas, quisimo hacer una Plataforma de alta disponibilidad con Kubernetes y automatización con Python + Web app “Dashboard”.</h3>
+<h4>Descripcion</h4>
+<p>Para el proyecto de final de grado de Administrador de sistemas, quisismo hacer una Plataforma de alta disponibilidad con Kubernetes y automatización con Python + Web app “Dashboard”.</p>
 
 <h4>Requisitos</h4>
 <p>Lo primero antes de nada es tener instalado y configurado Kubernetes, luego mediante un comando de generacion de proxy "kubectl proxy --port 8081 --address=<K8s_IP_Address> --accept-hosts=^* &" deberíamos tener acceso a la api.</p><br>
