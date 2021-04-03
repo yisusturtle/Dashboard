@@ -3,7 +3,7 @@
 
 <h4>Requisitos</h4>
 <p>Lo primero antes de nada es tener instalado y configurado Kubernetes, luego mediante un comando de generacion de proxy "kubectl proxy --port 8081 --address=<K8s_IP_Address> --accept-hosts=^* &" deberíamos tener acceso a la api.</p><br>
-  <span>Para mas informacion sobre esto: <a href:'https://www.dropbox.com/s/7paynogq736ts6z/README.md?dl=0'></a></span>
+  <span>Para mas informacion sobre esto: 'https://www.dropbox.com/s/7paynogq736ts6z/README.md?dl=0'</span>
 <h4>Funcionamiento:</h4>
 <p>Basicamente este proyecto utiliza una api generada por un proxy inverso en el servidor donde esta Kubernetes.<br>
  
